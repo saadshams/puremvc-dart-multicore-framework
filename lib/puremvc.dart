@@ -1,7 +1,4 @@
 library;
-export 'src/core/Controller.dart';
-export 'src/core/Model.dart';
-export 'src/core/View.dart';
 export 'src/interfaces/ICommand.dart';
 export 'src/interfaces/IController.dart';
 export 'src/interfaces/IFacade.dart';
@@ -12,6 +9,9 @@ export 'src/interfaces/INotifier.dart';
 export 'src/interfaces/IObserver.dart';
 export 'src/interfaces/IProxy.dart';
 export 'src/interfaces/IView.dart';
+export 'src/core/Controller.dart';
+export 'src/core/Model.dart';
+export 'src/core/View.dart';
 export 'src/patterns/command/SimpleCommand.dart';
 export 'src/patterns/command/MacroCommand.dart';
 export 'src/patterns/facade/Facade.dart';
