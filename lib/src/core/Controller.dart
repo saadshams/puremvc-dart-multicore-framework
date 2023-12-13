@@ -35,7 +35,7 @@ class Controller implements IController {
 
   @override
   void registerCommand(String notificationName, ICommand Function() factory) {
-    if (commandMap[notificationName] == null) {
+    if (!commandMap.containsKey(notificationName)) {
       view.registerObserver(notificationName, Observer(executeCommand, this));
     }
     commandMap[notificationName] = factory;

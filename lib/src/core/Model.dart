@@ -34,7 +34,7 @@ class Model implements IModel {
 
   @override
   bool hasProxy(String proxyName) {
-    return proxyMap[proxyName] != null;
+    return proxyMap.containsKey(proxyName);
   }
 
   @override
