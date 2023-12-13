@@ -5,9 +5,9 @@ class Notification implements INotification {
 
   dynamic _body;
 
-  String? _type;
+  String _type;
 
-  Notification(String name, [this._body, this._type]) : _name = name;
+  Notification(String name, [this._body, this._type = ""]) : _name = name;
 
   @override
   String get name => _name;
@@ -21,10 +21,10 @@ class Notification implements INotification {
   }
 
   @override
-  String? get type => _type;
+  String get type => _type;
 
   @override
-  set type(String? value) {
+  set type(String value) {
     _type = value;
   }
 

@@ -1,6 +1,6 @@
 import 'package:puremvc/puremvc.dart';
 
-class MacroCommand extends SimpleCommand {
+class MacroCommand extends Notifier implements ICommand {
   List<ICommand Function()> subCommands;
 
   MacroCommand() : subCommands = <ICommand Function()>[] {

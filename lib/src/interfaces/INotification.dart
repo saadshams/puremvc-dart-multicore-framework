@@ -5,7 +5,7 @@ abstract class INotification {
 
   set body(dynamic value);
 
-  String? get type;
+  String get type;
 
-  set type(String? value);
+  set type(String value);
 }

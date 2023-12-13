@@ -54,8 +54,7 @@ class Controller implements IController {
     commandMap.remove(notificationName);
   }
 
-  static IController getInstance(
-      String key, IController Function(String) factory) {
+  static IController getInstance(String key, IController Function(String) factory) {
     if (!instanceMap.containsKey(key)) {
       instanceMap[key] = factory(key);
     }

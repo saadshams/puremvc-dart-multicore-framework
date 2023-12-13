@@ -19,7 +19,7 @@ void main() {
     test("testRegisterAndNotifyObserver", () {
       final view = View.getInstance("ViewTestKey2", (k) => View(k));
 
-      final observer = Observer(viewTestMethod, null);
+      final observer = Observer(viewTestMethod, Object());
       view.registerObserver(ViewTestNote.NAME, observer);
 
       var note = ViewTestNote.create(10);

@@ -6,12 +6,10 @@ void main() {
   group("TestObserver", () {
 
     test("testObserverAccessors", () {
-      final observer = Observer(null, null);
-
       int observerTestVar = 0;
-      observer.notify = (notification) {
+      final IObserver observer = Observer((notification) {
         observerTestVar = notification.body;
-      };
+      }, Object());
       
       final note = Notification("ObserverTestNote", 10);
       observer.notifyObserver(note);
@@ -21,9 +19,9 @@ void main() {
 
     test("testObserverConstructor", () {
       int observerTestVar = 0;
-      final observer = Observer((notification){
+      final IObserver observer = Observer((notification){
         observerTestVar = notification.body;
-      }, null);
+      }, Object());
 
       final note = Notification("ObserverTestNote", 5);
       observer.notifyObserver(note);

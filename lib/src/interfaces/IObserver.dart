@@ -5,11 +5,7 @@ abstract class IObserver {
 
   bool compareNotifyContext(Object object);
 
-  void Function(INotification)? get notify;
+  set notify(void Function(INotification) value);
 
-  set notify(void Function(INotification)? value);
-
-  Object? get context;
-
-  set context(Object? value);
+  set context(Object value);
 }

@@ -113,7 +113,7 @@ class Facade implements IFacade {
   }
 
   @override
-  void sendNotification(String name, [body, String? type]) {
+  void sendNotification(String name, [body, String type = ""]) {
     notifyObservers(Notification(name, body, type));
   }
 

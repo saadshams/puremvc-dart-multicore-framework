@@ -9,7 +9,7 @@ class Notifier implements INotifier {
   }
 
   @override
-  void sendNotification(String name, [body, String? type]) {
+  void sendNotification(String name, [body, String type = ""]) {
     facade.sendNotification(name, body, type);
   }
 
