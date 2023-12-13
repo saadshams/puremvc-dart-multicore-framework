@@ -25,7 +25,7 @@ class View implements IView {
 
   @override
   void registerObserver(String notificationName, IObserver observer) {
-    if (observerMap.containsKey(notificationName) == false) {
+    if (!observerMap.containsKey(notificationName)) {
       observerMap[notificationName] = [];
     }
     observerMap[notificationName]!.add(observer);
@@ -47,7 +47,7 @@ class View implements IView {
     final observers = observerMap[notificationName];
     if (observers == null) return;
     for (var i = 0; i < observers.length; i++) {
-      if (observers[i].compareNotifyContext(notifyContext) == true) {
+      if (observers[i].compareNotifyContext(notifyContext)) {
         observers.removeAt(i);
         break;
       }
