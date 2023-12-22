@@ -6,12 +6,12 @@ void main() {
 
     test("testDefaultNameAccessor", () {
       final proxy = Proxy();
-      expect(proxy.name, equals(Proxy.NAME));
+      expect(proxy.proxyName, equals(Proxy.NAME));
     });
 
     test("testNameAccessor", () {
       var proxy = Proxy("TestProxy");
-      expect(proxy.name, equals("TestProxy"));
+      expect(proxy.proxyName, equals("TestProxy"));
     });
 
     test("testDataAccessors", () {
@@ -24,7 +24,7 @@ void main() {
 
     test("testConstructor", () {
       final proxy = Proxy("colors", ["red", "green", "blue"]);
-      expect(proxy.name, equals("colors"));
+      expect(proxy.proxyName, equals("colors"));
       List<String> data = proxy.data;
       
       expect(data.length, equals(3), reason: "Expecting data.length == 3");

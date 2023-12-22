@@ -3,11 +3,11 @@ import 'package:puremvc/puremvc.dart';
 class Mediator extends Notifier implements IMediator {
   static const NAME = "Mediator";
 
-  final String _name;
+  final String _mediatorName;
 
   dynamic _viewComponent;
 
-  Mediator([String? name, this._viewComponent]) : _name = name ?? NAME;
+  Mediator([String? mediatorName, this._viewComponent]) : _mediatorName = mediatorName ?? NAME;
 
   @override
   void onRegister() {}
@@ -24,7 +24,7 @@ class Mediator extends Notifier implements IMediator {
   void handleNotification(INotification notification) {}
 
   @override
-  String get name => _name;
+  String get mediatorName => _mediatorName;
 
   @override
   dynamic get viewComponent => _viewComponent;

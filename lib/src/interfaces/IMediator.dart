@@ -9,7 +9,7 @@ abstract class IMediator extends INotifier {
 
   void handleNotification(INotification notification);
 
-  String get name;
+  String get mediatorName;
 
   dynamic get viewComponent;
 

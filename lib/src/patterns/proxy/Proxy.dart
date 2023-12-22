@@ -3,11 +3,11 @@ import 'package:puremvc/puremvc.dart';
 class Proxy extends Notifier implements IProxy {
   static const NAME = "Proxy";
 
-  final String _name;
+  final String _proxyName;
 
   dynamic _data;
 
-  Proxy([String? name, this._data]) : _name = name ??= NAME;
+  Proxy([String? proxyName, this._data]) : _proxyName = proxyName ??= NAME;
 
   @override
   void onRegister() {}
@@ -16,7 +16,7 @@ class Proxy extends Notifier implements IProxy {
   void onRemove() {}
 
   @override
-  String get name => _name;
+  String get proxyName => _proxyName;
 
   @override
   dynamic get data => _data;

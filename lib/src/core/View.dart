@@ -60,11 +60,11 @@ class View implements IView {
 
   @override
   void registerMediator(IMediator mediator) {
-    if (mediatorMap.containsKey(mediator.name)) return;
+    if (mediatorMap.containsKey(mediator.mediatorName)) return;
 
     mediator.initializeNotifier(multitonKey);
 
-    mediatorMap[mediator.name] = mediator;
+    mediatorMap[mediator.mediatorName] = mediator;
 
     final interests = mediator.listNotificationInterests();
     if (interests.isNotEmpty) {

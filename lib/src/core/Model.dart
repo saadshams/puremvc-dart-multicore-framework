@@ -23,7 +23,7 @@ class Model implements IModel {
   @override
   void registerProxy(IProxy proxy) {
     proxy.initializeNotifier(multitonKey);
-    proxyMap[proxy.name] = proxy;
+    proxyMap[proxy.proxyName] = proxy;
     proxy.onRegister();
   }
 

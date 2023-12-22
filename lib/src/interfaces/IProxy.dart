@@ -5,7 +5,7 @@ abstract class IProxy extends INotifier {
 
   void onRemove();
 
-  String get name;
+  String get proxyName;
 
   dynamic get data;
 
