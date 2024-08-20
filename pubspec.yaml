@@ -1,20 +1,13 @@
 name: puremvc
-description: "A new Flutter project."
-version: 0.0.1
+description: "PureMVC Multicore Framework for Dart."
+version: 3.0.0
 homepage:
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
-  flutter: ">=1.17.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.0
+  test: "^1.25.8"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
