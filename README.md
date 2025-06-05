@@ -36,8 +36,8 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 * **Verify:** `dart --version`
 
 #### Android Studio Dart SDK Path:
-* Install Dart Plugin: Go to Android Studio -> Settings -> Plugins -> Search for Dart, then click Install
-* Enable Dart for Your Project: Go to Android Studio -> Settings -> Languages and Frameworks -> Dart
+* **Install Dart Plugin:** Go to Android Studio -> Settings -> Plugins -> Search for Dart, then click Install
+* **Enable Dart for Your Project:** Go to Android Studio -> Settings -> Languages and Frameworks -> Dart
   * Check Enable Dart Support for the project 'project-name'
   * Under Dart Support for Modules, ensure all modules are selected
 * **Mac**: `/opt/homebrew/opt/dart/libexec`
