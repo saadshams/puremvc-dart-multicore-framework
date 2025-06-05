@@ -1,5 +1,5 @@
 //
-//  Mediator.dart
+//  mediator.dart
 //  PureMVC Dart Multicore
 //
 //  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
@@ -35,13 +35,13 @@ class Mediator extends Notifier implements IMediator {
 
   final String _name;
 
-  dynamic _viewComponent;
+  dynamic _view;
 
   /// Constructor.
   ///
   /// @param [name] the name this [IMediator] will be registered with.
-  /// @param [viewComponent] the View Component (optional).
-  Mediator([String? name, this._viewComponent]) : _name = name ?? NAME;
+  /// @param [view] the View Component (optional).
+  Mediator([String? name, this._view]) : _name = name ?? NAME;
 
   /// Called by the [IView] when the [IMediator] is registered.
   @override
@@ -71,10 +71,10 @@ class Mediator extends Notifier implements IMediator {
   @override
   String get name => _name;
 
-  /// This [IMediator]'s [viewComponent].
+  /// This [IMediator]'s [view].
   @override
-  dynamic get viewComponent => _viewComponent;
+  dynamic get view => _view;
   @override
-  set viewComponent(dynamic value) => _viewComponent = value;
+  set view(dynamic value) => _view = value;
 
 }

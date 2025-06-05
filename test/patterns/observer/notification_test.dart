@@ -1,3 +1,11 @@
+//
+//  notification_test.dart
+//  PureMVC Dart Multicore
+//
+//  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
+//  Your reuse is governed by the BSD 3-Clause License
+//
+
 import "package:puremvc/puremvc.dart";
 import "package:test/test.dart";
 

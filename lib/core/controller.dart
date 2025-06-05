@@ -1,5 +1,5 @@
 //
-//  Controller.dart
+//  controller.dart
 //  PureMVC Dart Multicore
 //
 //  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>

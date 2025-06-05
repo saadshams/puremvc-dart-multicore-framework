@@ -1,5 +1,5 @@
 //
-//  IMediator.dart
+//  i_mediator.dart
 //  PureMVC Dart Multicore
 //
 //  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
@@ -52,8 +52,8 @@ abstract class IMediator extends INotifier {
   /// This [IMediator]'s [name].
   String get name;
 
-  /// This [IMediator]'s [viewComponent].
-  dynamic get viewComponent;
-  set viewComponent(dynamic value);
+  /// This [IMediator]'s [view].
+  dynamic get view;
+  set view(dynamic value);
 
 }
