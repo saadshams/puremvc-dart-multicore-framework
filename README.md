@@ -39,17 +39,14 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 
 **Verify:** `dart --version`
 
-**Install Dependencies:** `dart pub get`
+**Dependencies:** `dart pub get`
 
 **Test:** `dart test`
 
-#### Documentation
-* `dart doc`
-* `open doc/api/index.html`
+**Documentation:** `dart doc && open doc/api/index.html`
 
-#### Publish
-* `dart pub publish --dry-run`
-* `dart pub publish`
+**Publish:** `dart pub publish --dry-run` || `dart pub publish`
+
 ---
 
 ## Demos
