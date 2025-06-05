@@ -12,15 +12,16 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 
 #### Dart SDK Setup
 * Mac
-  1. Install Homebrew if it's not already installed. https://brew.sh
-  2. Add the official tap.
-     `brew tap dart-lang/dart`
-  3. Install Dart SDK:
-     `brew install dart`
+* Install Homebrew if it's not already installed. https://brew.sh
+* Add the official tap.
+  `brew tap dart-lang/dart`
+* Install Dart SDK:
+  `brew install dart`
+
 * Windows
-  1. Install Chocolatey. https://chocolatey.org/install
-  2. Install Dark SDK:
-     `choco install dart-sdk`
+  Install Chocolatey. https://chocolatey.org/install
+  Install Dark SDK:
+  `choco install dart-sdk`
 
 #### Add Dart to PATH:
 * Mac
