@@ -31,7 +31,7 @@ PureMVC is a lightweight framework for creating applications based upon the clas
   - Add to Start > System Environment Variables > Environment Variables > System variables
   - `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
-**Verify:** `dart --version`
+* **Verify:** `dart --version`
 
 #### Android Studio Dart SDK Path:
 * **Mac**: `/opt/homebrew/opt/dart/libexec`
