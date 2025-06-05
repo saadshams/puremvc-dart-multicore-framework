@@ -24,6 +24,13 @@ class Facade implements IFacade {
     initializeView();
   }
 
+  static IFacade getInstance(String key, IFacade Function(String) factory) {
+    if (instanceMap[key] == null) {
+      instanceMap[key] = factory(key);
+    }
+    return instanceMap[key]!;
+  }
+
   void initializeController() {
     controller = Controller.getInstance(multitonKey, (k) => Controller(k));
   }
@@ -77,18 +84,8 @@ class Facade implements IFacade {
   }
 
   @override
-  void registerObserver(String notificationName, IObserver observer) {
-    view.registerObserver(notificationName, observer);
-  }
-
-  @override
   void notifyObservers(INotification notification) {
     view.notifyObservers(notification);
-  }
-
-  @override
-  void removeObserver(String notificationName, Object notifyContext) {
-    view.removeObserver(notificationName, notifyContext);
   }
 
   @override
@@ -121,15 +118,8 @@ class Facade implements IFacade {
     multitonKey = key;
   }
 
-  static IFacade getInstance(String key, IFacade Function(String) factory) {
-    if (!instanceMap.containsKey(key)) {
-      instanceMap[key] = factory(key);
-    }
-    return instanceMap[key]!;
-  }
-
   static bool hasCore(String key) {
-    return instanceMap.containsKey(key);
+    return instanceMap[key] != null;
   }
 
   static void removeCore(String key) {

@@ -1,6 +1,6 @@
 name: puremvc
 description: "PureMVC Multicore Framework for Dart."
-version: 3.0.0
+version: 2.1.0
 homepage: https://github.com/PureMVC/puremvc-dart-multicore-framework
 documentation: https://github.com/PureMVC/puremvc-dart-multicore-framework/doc/api
 
