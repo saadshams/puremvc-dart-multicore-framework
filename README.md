@@ -37,11 +37,11 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 
 **Alternate Option:** You can also use the Dart SDK bundled with [Flutter SDK](https://docs.flutter.dev/get-started/install) at `flutter/bin/cache/dart-sdk`.
 
-#### Verify `dart --version`
+**Verify:** `dart --version`
 
-#### Install Dependencies `dart pub get`
+**Install Dependencies:** `dart pub get`
 
-#### Test `dart test`
+**Test:** `dart test`
 
 #### Documentation
 * `dart doc`
