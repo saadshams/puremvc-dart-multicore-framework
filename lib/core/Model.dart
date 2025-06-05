@@ -1,4 +1,12 @@
-import '../../puremvc.dart';
+//
+//  Controller.swift
+//  PureMVC Dart Multicore
+//
+//  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
+//  Your reuse is governed by the BSD 3-Clause License
+//
+
+import 'package:puremvc/puremvc.dart';
 
 class Model implements IModel {
   static const String MULTITON_MSG = "Model instance for this Multiton key already constructed!";

@@ -1,9 +1,17 @@
+//
+//  Controller.swift
+//  PureMVC Dart Multicore
+//
+//  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
+//  Your reuse is governed by the BSD 3-Clause License
+//
+
 import 'package:puremvc/puremvc.dart';
 
 class Controller implements IController {
   static const String MULTITON_MSG = "Controller instance for this Multiton key already constructed!";
 
-  static Map<String, IController> instanceMap = {};
+  static Map<String, IController> _instanceMap = {};
 
   late String multitonKey;
 
@@ -12,15 +20,22 @@ class Controller implements IController {
   late IView view;
 
   Controller(String key) {
-    if (instanceMap.containsKey(key)) throw Exception(MULTITON_MSG);
+    if (_instanceMap.containsKey(key)) throw Exception(MULTITON_MSG);
     multitonKey = key;
-    instanceMap[multitonKey] = this;
+    _instanceMap[multitonKey] = this;
     commandMap = {};
     initializeController();
   }
 
   initializeController() {
     view = View.getInstance(multitonKey, (k) => View(k));
+  }
+
+  static IController getInstance(String key, IController Function(String) factory) {
+    if (!_instanceMap.containsKey(key)) {
+      _instanceMap[key] = factory(key);
+    }
+    return _instanceMap[key]!;
   }
 
   @override
@@ -53,14 +68,7 @@ class Controller implements IController {
     commandMap.remove(notificationName);
   }
 
-  static IController getInstance(String key, IController Function(String) factory) {
-    if (!instanceMap.containsKey(key)) {
-      instanceMap[key] = factory(key);
-    }
-    return instanceMap[key]!;
-  }
-
   static void removeController(String key) {
-    instanceMap.remove(key);
+    _instanceMap.remove(key);
   }
 }

@@ -1,4 +1,4 @@
-import '../../puremvc.dart';
+import 'package:puremvc/puremvc.dart';
 
 abstract class IView {
   void registerObserver(String notificationName, IObserver observer);

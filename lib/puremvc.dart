@@ -1,3 +1,4 @@
+/// PureMVC Dart Multicore Framework.
 library;
 export 'interfaces/ICommand.dart';
 export 'interfaces/IController.dart';

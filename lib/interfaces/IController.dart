@@ -1,4 +1,4 @@
-import '../../puremvc.dart';
+import 'package:puremvc/puremvc.dart';
 
 abstract class IController {
   void executeCommand(INotification notification);

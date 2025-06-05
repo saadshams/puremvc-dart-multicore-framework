@@ -1,4 +1,4 @@
-import '../../puremvc.dart';
+import 'package:puremvc/puremvc.dart';
 
 class View implements IView {
   static const String MULTITON_MSG = "View instance for this Multiton key already constructed!";
