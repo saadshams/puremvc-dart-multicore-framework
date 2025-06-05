@@ -26,8 +26,8 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 
 #### Add Dart to PATH:
 * **Mac**
-    1. Add: `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc`
-    2. Load: `source ~/.zshrc`
+    1. Add to the path: `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc`
+    2. Apply the changes: `source ~/.zshrc`
 
 * **Windows**
   - Add to Start > System Environment Variables > Environment Variables > System variables
@@ -36,6 +36,10 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 * **Verify:** `dart --version`
 
 #### Android Studio Dart SDK Path:
+* Install Dart Plugin: Go to Android Studio -> Settings -> Plugins -> Search for Dart, then click Install
+* Enable Dart for Your Project: Go to Android Studio -> Settings -> Languages and Frameworks -> Dart
+  * Check Enable Dart Support for the project 'project-name'
+  * Under Dart Support for Modules, ensure all modules are selected
 * **Mac**: `/opt/homebrew/opt/dart/libexec`
 * **Windows**: `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
