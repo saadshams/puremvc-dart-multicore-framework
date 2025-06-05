@@ -1,4 +1,4 @@
-## [PureMVC](http://puremvc.github.com/) Dart MultiCore Framework PureMVC Dart [![Dart](https://github.com/saadshams/puremvc-dart-multicore-framework/actions/workflows/dart.yml/badge.svg)](https://github.com/saadshams/puremvc-dart-multicore-framework/actions/workflows/dart.yml)
+## [PureMVC](http://puremvc.github.com/) Dart MultiCore Framework [![Dart](https://github.com/saadshams/puremvc-dart-multicore-framework/actions/workflows/dart.yml/badge.svg)](https://github.com/saadshams/puremvc-dart-multicore-framework/actions/workflows/dart.yml)
 
 PureMVC is a lightweight framework for creating applications based upon the classic [Model-View-Controller](http://en.wikipedia.org/wiki/Model-view-controller) design meta-pattern. This is a Dart port of the [AS3 reference implementation of the MultiCore Version](https://github.com/PureMVC/puremvc-as3-multicore-framework/wiki). It supports [modular programming](http://en.wikipedia.org/wiki/Modular_programming) through the use of [Multiton](http://en.wikipedia.org/wiki/Multiton) Core actors.
 
@@ -19,7 +19,7 @@ Production - [Version 2.1.0](https://github.com/PureMVC/puremvc-dart-multicore-f
 * [Flutter](https://en.wikipedia.org/wiki/Flutter_(software))
 
 ## License
-* PureMVC MultiCore Framework for Dart - Copyright © 2025 Saad Shams, David Foley, Cliff Hall
+* PureMVC MultiCore Framework for Dart - Copyright © 2025 [Cliff Hall](https://www.linkedin.com/in/cliff/), [Saad Shams](https://www.linkedin.com/in/muizz/)
 * PureMVC - Copyright © 2006-2025 [Futurescale, Inc](http://futurescale.com).
 * All rights reserved.
 
