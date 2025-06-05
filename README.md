@@ -23,25 +23,28 @@ PureMVC is a lightweight framework for creating applications based upon the clas
      `choco install dart-sdk`
 
 #### Add Dart to PATH:
-* Mac
+* **Mac**
     1. Add: `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc`
     2. Load: `source ~/.zshrc`
 
-* Windows
+* **Windows**
   - Add to Start > System Environment Variables > Environment Variables > System variables
   - `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
 #### Android Studio Dart SDK Path:
-* Mac: `/opt/homebrew/opt/dart/libexec`
-* Windows: `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
+* **Mac**: `/opt/homebrew/opt/dart/libexec`
+* **Windows**: `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
 **Alternate Option:** You can also use the Dart SDK bundled with [Flutter SDK](https://docs.flutter.dev/get-started/install) at `flutter/bin/cache/dart-sdk`.
 
-####
-* Test `dart --version`
+#### Check
+* `dart --version`
 
 #### Install Dependencies
 * `dart pub get`
+
+#### Test
+* `dart test`
 
 #### Documentation
 * `dart doc`
