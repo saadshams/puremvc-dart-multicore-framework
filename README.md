@@ -8,6 +8,54 @@ PureMVC is a lightweight framework for creating applications based upon the clas
 ## Installation
 `dart pub add puremvc`
 
+## Development
+
+### Dart SDK Setup
+* Mac
+  1. Install Homebrew if it's not already installed. https://brew.sh
+  2. Add the official tap.
+     `brew tap dart-lang/dart`
+  3. Install Dart SDK:
+     `brew install dart`
+* Windows
+  1. Install Chocolatey
+  2. Install Dark SDK:
+     `choco install dart-sdk`
+
+### Add Dart to PATH:
+* Mac
+    `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc
+    source ~/.zshrc`
+
+* Windows
+  1. Add to Start > System Environment Variables > Environment Variables > System variables
+    `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
+
+### Android Studio Dart SDK Path:
+* Mac
+    `/opt/homebrew/opt/dart/libexec`
+* Windows
+    `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
+
+###
+Test
+`dart --version`
+
+### Alternate Option
+You can also download the [Flutter SDK](https://docs.flutter.dev/get-started/install) and use the bundled Dart SDK (flutter/bin/cache/dart-sdk).
+
+### Install Dependencies
+dart pub get
+
+### Documentation
+dart doc
+open doc/api/index.html
+
+### Publish
+dart pub publish --dry-run
+dart pub publish
+---
+
 ## Demos
 * [Reverse Text](https://github.com/PureMVC/puremvc-dart-demo-reversetext/wiki)
 
@@ -30,34 +78,3 @@ Production - [Version 2.1.0](https://github.com/PureMVC/puremvc-dart-multicore-f
    * Neither the name of Futurescale, Inc., PureMVC.org, nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-<!--
-## Development
-### Install Dependencies
-dart pub get
-
-### Generate Documentation
-dart doc
-open doc/api/index.html
-
-### Publish
-dart pub publish --dry-run
-dart pub publish
-
-### Dart SDK Setup
-1. Install Homebrew if it's not already installed. https://brew.sh
-2. Add the official tap.
-   `brew tap dart-lang/dart`
-3. Install Dart SDK:
-   `brew install dart`
-
-### Add Dart to PATH:
-`echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc`
-
-### Android Studio Dart SDK Path: 
-`/opt/homebrew/opt/dart/libexec`
-
-### Alternate Option
-You can also download the [Flutter SDK](https://docs.flutter.dev/get-started/install) and use the bundled Dart SDK (flutter/bin/cache/dart-sdk).
--->
