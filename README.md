@@ -18,24 +18,22 @@ PureMVC is a lightweight framework for creating applications based upon the clas
   3. Install Dart SDK:
      `brew install dart`
 * Windows
-  1. Install Chocolatey
+  1. Install Chocolatey. https://chocolatey.org/install
   2. Install Dark SDK:
      `choco install dart-sdk`
 
 ### Add Dart to PATH:
 * Mac
-    `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc
-    source ~/.zshrc`
+    1. Add: `echo 'export PATH="/opt/homebrew/opt/dart/bin:$PATH"' >> ~/.zshrc`
+    2. Load: `source ~/.zshrc`
 
 * Windows
   1. Add to Start > System Environment Variables > Environment Variables > System variables
-    `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
+    * `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
 ### Android Studio Dart SDK Path:
-* Mac
-    `/opt/homebrew/opt/dart/libexec`
-* Windows
-    `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
+* Mac: `/opt/homebrew/opt/dart/libexec`
+* Windows: `C:\ProgramData\chocolatey\lib\dart-sdk\tools\dart-sdk\bin`
 
 ###
 Test
