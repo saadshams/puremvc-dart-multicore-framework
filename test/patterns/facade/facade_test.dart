@@ -49,7 +49,7 @@ void main() {
       facade.registerProxy(proxy);
 
       facade.removeProxy("sizes")!;
-      expect(proxy.proxyName, equals("sizes"), reason: "Expecting removedProxy.name == 'sizes'");
+      expect(proxy.name, equals("sizes"), reason: "Expecting removedProxy.name == 'sizes'");
       expect(facade.retrieveProxy("sizes"), isNull, reason: "Expecting proxy is null");
     });
 
@@ -59,7 +59,7 @@ void main() {
       expect(facade.retrieveMediator(Mediator.NAME), isNotNull, reason: "Expecting mediator is not null");
 
       final removedMediator = facade.removeMediator(Mediator.NAME)!;
-      expect(removedMediator.mediatorName, equals(Mediator.NAME), reason: "Expecting removedMediator.name == Mediator.NAME");
+      expect(removedMediator.name, equals(Mediator.NAME), reason: "Expecting removedMediator.name == Mediator.NAME");
 
       expect(facade.retrieveMediator(Mediator.NAME), isNull, reason: "Expecting facade.retrieveMediator(Mediator.NAME) == null");
     });

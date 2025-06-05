@@ -6,12 +6,12 @@ void main() {
 
     test("testDefaultNameAccessor", () {
       final mediator = Mediator();
-      expect(mediator.mediatorName, equals(Mediator.NAME));
+      expect(mediator.name, equals(Mediator.NAME));
     });
 
     test("testNameAccessor", () {
       var mediator = Mediator("TestMediator");
-      expect(mediator.mediatorName, equals("TestMediator"));
+      expect(mediator.name, equals("TestMediator"));
     });
 
     test("testViewAccessor", () {

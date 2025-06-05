@@ -55,7 +55,7 @@ void main() {
 
       final removedMediator = view.removeMediator("testing")!;
 
-      expect(removedMediator.mediatorName, equals("testing"), reason: "Expecting removedMediator.getMediatorName() == 'testing'");
+      expect(removedMediator.name, equals("testing"), reason: "Expecting removedMediator.getMediatorName() == 'testing'");
       
       expect(view.retrieveMediator("testing"), isNull, reason: "Expecting view.retrieveMediator( 'testing' ) == null");
     });

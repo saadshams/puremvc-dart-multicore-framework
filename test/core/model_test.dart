@@ -30,7 +30,7 @@ void main() {
 
       final removedProxy = model.removeProxy("sizes")!;
 
-      expect(removedProxy.proxyName, equals("sizes"), reason: "Expecting removedProxy.getProxyName() == 'sizes'");
+      expect(removedProxy.name, equals("sizes"), reason: "Expecting removedProxy.getProxyName() == 'sizes'");
 
       expect(model.retrieveProxy("sizes"), isNull, reason: "Expecting proxy is null");
     });

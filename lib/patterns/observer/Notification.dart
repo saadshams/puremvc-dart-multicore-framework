@@ -1,3 +1,11 @@
+//
+//  Notification.dart
+//  PureMVC Dart Multicore
+//
+//  Copyright(c) 2025 Saad Shams <saad.shams@puremvc.org>
+//  Your reuse is governed by the BSD 3-Clause License
+//
+
 import 'package:puremvc/puremvc.dart';
 
 class Notification implements INotification {
@@ -17,19 +25,13 @@ class Notification implements INotification {
 
   @override
   dynamic get body => _body;
-
   @override
-  set body(dynamic value) {
-    _body = value;
-  }
+  set body(dynamic value) => _body = value;
 
   @override
   String get type => _type;
-
   @override
-  set type(String value) {
-    _type = value;
-  }
+  set type(String value) => _type = value;
 
   @override
   String toString() {
