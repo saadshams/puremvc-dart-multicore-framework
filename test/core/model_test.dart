@@ -40,8 +40,8 @@ void main() {
       IModel model = Model.getInstance("ModelTestKey2", (k) => Model(k));
       model.registerProxy(Proxy("colors", ["red", "green", "blue"]));
 
-      IProxy proxy = model.retrieveProxy("colors")!;
-      final data = proxy.data as List<String>;
+      IProxy? proxy = model.retrieveProxy("colors");
+      final data = proxy?.data as List<String>;
 
       // test assertions
       expect(data, isNotNull, reason: "Expecting data not null");
@@ -59,10 +59,10 @@ void main() {
       model.registerProxy(proxy);
 
       // remove the proxy
-      final removedProxy = model.removeProxy("sizes")!;
+      IProxy? removedProxy = model.removeProxy("sizes");
 
       // assert that we removed the appropriate proxy
-      expect(removedProxy.name, equals("sizes"), reason: "Expecting removedProxy.getProxyName() == 'sizes'");
+      expect(removedProxy?.name, equals("sizes"), reason: "Expecting removedProxy.getProxyName() == 'sizes'");
 
       // ensure that the proxy is no longer retrievable from the model
       expect(model.retrieveProxy("sizes"), isNull, reason: "Expecting proxy is null");
@@ -72,7 +72,7 @@ void main() {
     });
 
     /// Tests the hasProxy Method
-    test("Expecting proxy is null", () {
+    test("testHasProxy", () {
       // register a proxy
       IModel model = Model.getInstance("ModelTestKey4", (k) => Model(k));
       IProxy proxy = Proxy("aces", ["clubs", "spades", "hearts", "diamonds"]);

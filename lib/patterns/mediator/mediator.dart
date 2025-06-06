@@ -31,6 +31,7 @@ import 'package:puremvc/puremvc.dart';
 /// See [INotification], [IView].
 class Mediator extends Notifier implements IMediator {
 
+  /// Default name of the mediator if none is provided.
   static const NAME = "Mediator";
 
   final String _name;

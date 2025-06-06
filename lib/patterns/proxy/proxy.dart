@@ -23,6 +23,7 @@ import 'package:puremvc/puremvc.dart';
 /// See [IModel].
 class Proxy extends Notifier implements IProxy {
 
+  /// Default name of the proxy if none is provided.
   static const NAME = "Proxy";
 
   final String _name;
