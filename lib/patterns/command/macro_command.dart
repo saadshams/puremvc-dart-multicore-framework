@@ -61,9 +61,9 @@ class MacroCommand extends Notifier implements ICommand {
   @override
   void execute(INotification notification) {
     while (subCommands.isNotEmpty) {
-      final factory = subCommands.removeAt(0);
+      ICommand Function()? factory = subCommands.removeAt(0);
       ICommand command = factory();
-      command.initializeNotifier(multitonKey);
+      command.initializeNotifier(multitonKey!);
       command.execute(notification);
     }
   }

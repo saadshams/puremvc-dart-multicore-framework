@@ -31,7 +31,7 @@ import 'package:puremvc/puremvc.dart';
 /// See [Proxy], [Facade], [Mediator], [MacroCommand], [SimpleCommand].
 class Notifier implements INotifier {
 
-  late String _multitonKey;
+  late String? _multitonKey;
 
   /// Initialize this [INotifier] instance.
   ///
@@ -58,13 +58,19 @@ class Notifier implements INotifier {
 
   /**
    *  Return the Multiton Facade instance
-   *  -  Throws [MultitonErrorNotifierLacksKey] if no multitonKey is set. Usually means facade getter is being accessed before initializeNotifier has been called (i.e., from the constructor). Defer facade access until the onRegister method.
+   *
+   *  -  Throws [Exception] if no multitonKey is set. Usually means facade getter is being accessed before initializeNotifier has been called (i.e., from the constructor). Defer facade access until the onRegister method.
    */
+
+  /// @throws [Exception] if an instance for this Multiton key has already been constructed.
   IFacade get facade {
-    return Facade.getInstance(_multitonKey, (k) => Facade(k));
+    if ( _multitonKey == null ) throw Exception(MULTITON_MSG);
+    return Facade.getInstance(_multitonKey!, (k) => Facade(k));
   }
 
+  static const String MULTITON_MSG = "multitonKey for this Notifier not yet initialized!";
+
   /// The Multiton Key for this app
-  String get multitonKey => _multitonKey;
-  set multitonKey(String value) => _multitonKey = value;
+  String? get multitonKey => _multitonKey;
+  set multitonKey(String? value) => _multitonKey = value;
 }

@@ -26,8 +26,10 @@ class Proxy extends Notifier implements IProxy {
   /// Default name of the proxy if none is provided.
   static const NAME = "Proxy";
 
+  // This [IProxy]'s [name]
   final String _name;
 
+  // This [IProxy]'s [data]
   dynamic _data;
 
   /// Constructor.
@@ -44,7 +46,7 @@ class Proxy extends Notifier implements IProxy {
   @override
   void onRemove() {}
 
-  /// This [IMediator]'s [name].
+  /// This [Proxy]'s [name].
   @override
   String get name => _name;
 

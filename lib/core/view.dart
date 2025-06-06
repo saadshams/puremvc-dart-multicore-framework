@@ -97,8 +97,8 @@ class View implements IView {
     if (observersRef == null) return;
 
     List<IObserver> observers = List<IObserver>.from(observersRef);
-    for (var i = 0; i < observers.length; i++) {
-      observers[i].notifyObserver(notification);
+    for (final observer in observers) {
+      observer.notifyObserver(notification);
     }
   }
 
@@ -108,8 +108,9 @@ class View implements IView {
   /// @param notifyContext The [notifyContext] to match for removing the [IObserver].
   @override
   void removeObserver(String notificationName, Object notifyContext) {
-    final observers = _observerMap[notificationName];
+    List<IObserver>? observers = _observerMap[notificationName];
     if (observers == null) return;
+
     for (var i = 0; i < observers.length; i++) {
       if (observers[i].compareNotifyContext(notifyContext)) {
         observers.removeAt(i);
@@ -141,9 +142,9 @@ class View implements IView {
 
     _mediatorMap[mediator.name] = mediator;
 
-    final interests = mediator.listNotificationInterests();
+    List<String> interests = mediator.listNotificationInterests();
     if (interests.isNotEmpty) {
-      final observer = Observer(mediator.handleNotification, mediator);
+      IObserver observer = Observer(mediator.handleNotification, mediator);
       for (var i = 0; i < interests.length; i++) {
         registerObserver(interests[i], observer);
       }
@@ -176,7 +177,7 @@ class View implements IView {
   /// @returns [IMediator] The instance that was removed, or `null` if none was found.
   @override
   IMediator? removeMediator(String mediatorName) {
-    final mediator = _mediatorMap[mediatorName];
+    IMediator? mediator = _mediatorMap[mediatorName];
     if (mediator == null) return null;
 
     List<String> interests = mediator.listNotificationInterests();

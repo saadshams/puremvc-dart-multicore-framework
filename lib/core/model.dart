@@ -107,7 +107,7 @@ class Model implements IModel {
   /// @returns [IProxy] that was removed from the [IModel], or `null` if none existed.
   @override
   IProxy? removeProxy(String proxyName) {
-    final proxy = _proxyMap[proxyName];
+    IProxy? proxy = _proxyMap[proxyName];
     if (proxy != null) {
       _proxyMap.remove(proxyName);
       proxy.onRemove();

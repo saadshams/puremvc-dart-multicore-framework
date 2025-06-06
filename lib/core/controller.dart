@@ -84,9 +84,10 @@ class Controller implements IController {
   /// @param notification The notification to execute the associated [ICommand] for.
   @override
   void executeCommand(INotification notification) {
-    final factory = _commandMap[notification.name];
+    ICommand Function()? factory = _commandMap[notification.name];
     if (factory == null) return;
-    final command = factory();
+
+    ICommand command = factory();
     command.initializeNotifier(_multitonKey);
     command.execute(notification);
   }
@@ -119,8 +120,10 @@ class Controller implements IController {
   void removeCommand(String notificationName) {
     // if the Command is registered...
     if (_commandMap.containsKey(notificationName)) {
+      // remove the observer
       _view.removeObserver(notificationName, this);
     }
+    // remove the command
     _commandMap.remove(notificationName);
   }
 
